@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!--Responsive Design-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/media-laptop.css">
+        <link rel="stylesheet" href="../css/media-tablet.css">
+        <link rel="stylesheet" href="../css/media-pixel-2xl.css">
+        <link rel="stylesheet" href="../css/media-mobile.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!--Css-->
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+        <!--FontAwesome Icone-->
+        <script src="https://kit.fontawesome.com/fbe62a62bd.js" crossorigin="anonymous"></script>
+
+        <!--Icone onglet-->
+        <link rel="shortcut icon" href="../logo/icone_onglet.png">
+        
+        <title>Votre appareil photo !</title>
+    </head>
+        <body>
+            <!--Header-->
+            <header class="header">
+                <nav class="navbar navbar-expand-lg py-3">
+                    <div class="container">
+                        <a href="../pages/products-list.html">
+                            <img src="../logo/logo.JPG" class="img-header" alt="Site du logo">
+                        </a>
+                        
+                        <!--Menu déroulant-->
+                        <div class="dropdown">
+                            <button onclick="menuToggle()" class="dropbtn"><i class="fa fa-bars"></i> Menu Orinoco</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="../pages/products-list.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Accueil <span class="sr-only">(current)</span></a>
+                                <a href="#" class="font-weight-bold" style="color: rgb(218, 151, 50);">Notifications</a>
+                                <a href="#" class="e font-weight-bold" style="color: rgb(218, 151, 50);">Mon compte</a>
+                                <a href="../pages/confirmation.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Ma commande</a>
+                                <a href="../pages/basket.html" class="font-weight-bold" style="color: rgb(218, 151, 50);">Mon panier</a></li>
+                            </div>
+                        </div>
+
+                        <!--Menu de navigation-->
+                        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="../pages/products-list.html" class="nav-link text-uppercase font-weight-bold">Accueil <span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Notifications</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Compte</a></li>
+                                <li class="nav-item"><a href="../pages/confirmation.html" class="nav-link text-uppercase font-weight-bold">Commande</a></li>
+                                <li class="nav-item"><a href="../pages/basket.html" class="nav-link text-uppercase font-weight-bold">Panier</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+                <!--Main-->
+                <main class="l-main l-center" role="main" aria-label="Contenu principale">
+                    <article class="jumbotron">
+                        <div class="row-jumbotron">
+                            <!--Template-->
+                            <div id="cardProduct"></div>                           
+                            <!--Bouton ajouter au panier-->
+                            <div class="btnAddCart" role="button" aria-label="Bouton" tabindex="0">
+                                <button id="add_product_to_basket" onclick="addProductToLocalStorage(event)" class="button">Ajouter au panier</button>
+                            <!--Bouton voir le panier-->
+                                <button id="seeBasket" class="button"><a href="../pages/basket.html">Voir le panier</a></button>
+                            </div>
+                    </article>
+                </main>
+                    <!-- Footer -->
+                    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+                        <div class="container-footer">
+                            <section class="rs">
+                                <!--Facebook-->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button"data-mdb-ripple-color="dark" title="Venez visiter notre page Facebook !"><i class="fab fa-facebook-f"></i></a>
+                          
+                                <!--Twitter-->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark" title="Venez visiter notre page Twiiter !"><i class="fab fa-twitter"></i></a>
+                          
+                                <!--Instagram-->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark" title="Venez visiter notre compte Instagram !"><i class="fab fa-instagram"></i></a>
+                          
+                                <!--Github-->
+                                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/Cam1793/CamilleNICOLAS_5_13_07_2021" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                              </section>
+                        </div>
+
+                        <!-- Informations du site -->
+                        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                            <ul class="footer-list list-unstyled">
+                                <li class="nave-item-active">
+                                    <a href="#" class="nav-link-footer font-weight-bold";>Catalogue</a>
+                                </li>
+                                <li class="nave-item">
+                                    <a href="#" class="nav-link-footer font-weight-bold">Conditions d'utlisation</a>
+                                </li>
+                                <li class="nave-item">
+                                    <a href="#" class="nav-link-footer font-weight-bold">À propos du site</a>
+                                </li>
+                                <li class="nave-item">
+                                    <a href="mailto:camille.nicolas93@gmail.com" class="nav-link-footer font-weight-bold">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </footer>
+
+            <!--JS-->
+                    <!--< <script type="text/javascript" src="../js/model/camera.js"></script> -->      
+            <script type="text/javascript"  src="../js/product.js" defer></script>
+            <script type="text/javascript" src="../js/template/camera-product-template.js" defer></script>  
+            <!--<script type="text/javascript"  src="../js/basket.js"></script>  -->
+            <script type="text/javascript" src="../js/model/nav-toggle.js"></script>
+        </body>
+</html>

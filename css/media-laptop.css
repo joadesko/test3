@@ -1,0 +1,71 @@
+/**Responsive Laptop 1204px**/
+
+/*index*/
+@media (max-width: 1204px){
+    .navbar-expand{
+       margin-top: 40px;
+       margin-bottom: -40px;
+    }
+
+    .search-bar{
+        margin-left: 320px;
+    }
+
+    #productsList{
+        flex-wrap: wrap;
+    }
+
+    .jumbotron{
+        height: 0px;
+    }
+
+    .p-2{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 990px){
+    .dropdown{
+        visibility: visible !important;
+        margin: 20px;
+    }
+}
+
+/*Product*/
+@media (max-width: 1204px){
+    
+    .product{
+        width: 100%;
+    }
+
+    #cardTitleProduct{
+        margin-top: 10px;
+    }
+
+    #cardDescriptionProduct{
+        margin-top: 10px; 
+    }
+
+    .choiceLenses{
+        margin-top: 30px;
+    }
+
+    #cardImgProduct{
+        width: 65% !important;  
+    }
+    
+    .product{
+        flex-direction: column;
+    }
+
+    .cardBodyProduct{
+        margin-bottom: 0 !important;
+    }
+}
+
+
+/*Panier*/
+@media (max-width: 1204px){
+
+}
+
